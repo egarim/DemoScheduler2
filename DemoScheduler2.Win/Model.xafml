@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application Logo="ExpressAppLogo">
+  <NavigationItems NavigationStyle="Accordion" DefaultChildItemsDisplayStyle="List" />
+  <Options UIType="TabbedMDI" FormStyle="Ribbon" />
+  <SchemaModules>
+    <SchemaModule Name="SchedulerModuleBase" Version="25.1.3.0" IsNewNode="True" />
+    <SchemaModule Name="SchedulerWindowsFormsModule" Version="25.1.3.0" IsNewNode="True" />
+    <SchemaModule Name="SystemModule" Version="25.1.3.0" IsNewNode="True" />
+    <SchemaModule Name="SystemWindowsFormsModule" Version="25.1.3.0" IsNewNode="True" />
+  </SchemaModules>
+  <Views>
+    <DetailView Id="Dashboard_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="35.33408833522084">
+            <LayoutGroup Id="Dashboard" RelativeSize="0.32051282051282054" />
+            <LayoutItem Id="Description" Index="1" RelativeSize="33.333333333333336" />
+            <LayoutItem Id="Name" Index="2" RelativeSize="14.102564102564102" />
+            <LayoutGroup Id="GridEvents" ShowCaption="True" Caption="Grid Events" TextAlignMode="AlignWithChildren" Index="3" RelativeSize="52.243589743589745" IsNewNode="True">
+              <LayoutItem Id="GridEvents" TextAlignMode="AutoSize" ViewItem="GridEvents" Index="0" RelativeSize="100" IsNewNode="True" />
+            </LayoutGroup>
+          </LayoutGroup>
+          <TabbedGroup Id="TabContainer" Index="1" RelativeSize="64.66591166477916">
+            <LayoutGroup Id="GridEvents" ShowCaption="True" TextAlignMode="AlignWithChildren" Index="0" Removed="True">
+              <LayoutItem Id="GridEvents" TextAlignMode="AutoSize" />
+            </LayoutGroup>
+            <LayoutGroup Id="SchedulerEvents" ShowCaption="True" TextAlignMode="AlignWithChildren" Index="0">
+              <LayoutItem Id="SchedulerEvents" TextAlignMode="AutoSize" />
+            </LayoutGroup>
+          </TabbedGroup>
+          <LayoutGroup Id="SizeableEditors" RelativeSize="16.647791619479047" Removed="True" />
+          <TabbedGroup Id="Tabs" Removed="True" />
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="Dashboard_GridEvents_ListView" EditorTypeName="DevExpress.ExpressApp.Win.Editors.GridListEditor" />
+  </Views>
+</Application>
